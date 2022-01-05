@@ -1,0 +1,29 @@
+{
+  "name": "automation",
+  "version": "1.0.0",
+  "author": "osmo-tester",
+  "license": "MIT",
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build",
+    "test": "npm start & cypress run",
+    "cy:verify": "cypress verify",
+    "cy:info": "cypress info",
+    "cy:version": "cypress version",
+    "cypress:run": "npx cypress run",
+    "cy:run:record": "cypress run --record",
+    "cypress:open": "npx cypress open"
+  },
+  "private": true,
+  "dependencies": {
+    "npm-run-all": "^4.1.2",
+    "serve": "11.3.0"
+  },
+  "devDependencies": {
+    "cypress": "^9.2.0"
+  },
+  "engines": {
+    "node": ">=12"
+  }
+}
