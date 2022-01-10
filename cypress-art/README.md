@@ -18,9 +18,9 @@ The expected result of the test run: 6 tests will pass and 1 (last) test will fa
 
 **What can be done:**
 
-- more functional and API tests can be added
-- more manual tets can be automated
-- gitHub CI
+- more functional and API tests can be added;
+- more manual tets can be automated;
+- gitHub CI;
 
 **Tests and Bugs:**
 
