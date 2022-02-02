@@ -1,7 +1,6 @@
 # osmo-tester - Macbook-Online-Store-review
 
 **Overview Macbook Online Store:**
-**Changes**
 
 Automation was done using Cypress.  
 One test is expected to fail because it's an actual bug (read test logs).  
