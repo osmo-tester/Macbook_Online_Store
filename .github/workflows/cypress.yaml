@@ -1,0 +1,31 @@
+name: Cypress
+on: [pull_request]
+jobs:
+  cypress:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          path: current
+          ref: ${{ github.event.inputs.e2e_ref || github.ref }}
+
+      - name: Run tests 💨
+        uses: cypress-io/github-action@v2
+        with:
+          working-directory: ./current
+          config-file: cypress.json
+          browser: chrome
+
+      - name: Upload screenshots on Failure 📸
+        uses: actions/upload-artifact@v2
+        if: failure()
+        with:
+          name: cypress-screenshots
+          path: ./current/cypress/screenshots
+
+      - name: Upload Service Logs 🪵
+        uses: actions/upload-artifact@v2
+        if: failure()
+        with:
+          name: service-logs
+          path: /tmp/service_logs
