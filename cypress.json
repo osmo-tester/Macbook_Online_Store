@@ -2,7 +2,6 @@
     "baseUrl": "https://vuejs-shopping-cart.coddeine.com",
     "integrationFolder": "cypress/tests",
     "video": false,
-    "screenshotOnRunFailure": false,
     "experimentalSessionSupport": true,
     "viewportWidth": 1280,
     "viewportHeight": 960,
