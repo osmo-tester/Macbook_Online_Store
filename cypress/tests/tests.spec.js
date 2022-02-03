@@ -13,7 +13,7 @@ describe('Login', () => {
     })
   })
   
-describe('Registration', () => {
+describe.skip('Registration', () => {
   it("tests duplicated email can't be registered", () => {
     onLoginPage.registerNewUser();
     cy.contains('The email address is already in use by another account.')
