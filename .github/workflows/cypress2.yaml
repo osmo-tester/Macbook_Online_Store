@@ -1,18 +1,9 @@
-name: included
+name: Cypress tests
 on: [pull_request]
 jobs:
   cypress-run:
     runs-on: ubuntu-latest
-    # Docker image with Cypress pre-installed
-    # https://github.com/cypress-io/cypress-docker-images/tree/master/included
     container: cypress/included:3.8.3
     steps:
       - uses: actions/checkout@v1
       - run: cypress run
-
-      - name: Upload screenshots on Failure 📸
-        uses: actions/upload-artifact@v2
-        if: failure()
-        with:
-          name: cypress-screenshots
-          path: ./current/cypress/screenshots
