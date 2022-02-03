@@ -16,6 +16,10 @@ All automated tests are inside `./cypress/tests/tests.spec.js.`
 
 The expected result of the test run: 6 tests will pass and 1 (last) test will fail.
 
+**GitHub Actions**
+
+Stack of tests automaticly runing on GitHub Actions after each push or pull request.
+
 **What can be done:**
 
 - more functional and API tests can be added;
