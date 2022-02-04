@@ -52,7 +52,7 @@ describe('Shopping cart/Checkout', () => {
       cy.contains('Your order has been successfully processed!').should('be.visible');
     })
 
-    it.skip("tests that quantity of products can't be negative", () => {
+    it("tests that quantity of products can't be negative", () => {
       cy.log('This is a BUG and test is expected to fail');
       onLoginPage.login();
       onMainPage.addProductToCart("macbook Retina 13.3' ME662 (2013)");
@@ -61,3 +61,4 @@ describe('Shopping cart/Checkout', () => {
       cy.get('input').should('not.have.value', '-1');
     })
   })
+ 
