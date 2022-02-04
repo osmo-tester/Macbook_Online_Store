@@ -17,6 +17,18 @@ export class LoginPage {
     cy.get('#password').type(password);
     cy.get('[type="submit"]').click();
   }
+
+  logout() {
+    cy.get('#navbarTop').then(navbarTop =>{
+      if(navbarTop){
+        cy.contains('Login').should('be.visible')
+      }else{
+        cy.contains('Logout '+(username))
+        .click()
+        .and('be.visible', 'Login')
+      }
+    })
+  }
 }
 
 export const onLoginPage = new LoginPage();
