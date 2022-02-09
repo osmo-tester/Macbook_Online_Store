@@ -21,7 +21,7 @@ describe('Registration', () => {
         .should('be.visible');
       })
     })
-
+    
 describe('Shopping cart/Checkout', () => {
     it('tests that product can be added to the cart', () => {
       onMainPage.addProductToCart("macbook Retina 13.3' ME662 (2013)");
