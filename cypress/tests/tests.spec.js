@@ -12,6 +12,14 @@ describe('Login', () => {
       cy.contains('Logout').should('be.visible');
     })
   })
+  
+describe('Registration', () => {
+  it("tests duplicated email can't be registered", () => {
+    onLoginPage.registerNewUser();
+    cy.contains('The email address is already in use by another account.')
+      .should('be.visible');
+    })
+  })
 
 describe('Registration', () => {
     it("Tests duplicated email can't be registered", () => {
