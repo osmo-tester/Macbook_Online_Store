@@ -4,7 +4,7 @@
 
 Automation was done using Cypress.  
 One test is expected to fail because it's an actual bug (read test logs).  
-All automated tests are inside `./cypress/tests/tests.spec.js.`
+All automated tests are inside `./cypress/tests/tests.spec.js.` and `./cypress/tests/tests.spec.js.`
 
 **To run tests:**
 
