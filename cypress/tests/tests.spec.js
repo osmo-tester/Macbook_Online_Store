@@ -22,13 +22,23 @@ describe('Registration', () => {
       })
     })  
 
+
 describe('Login', () => {
     it('tests that user can login with valid credentials', () => {
       onLoginPage.login();
       cy.contains('Logout').should('be.visible');
       })
     })  
-    
+
+describe('Registration', () => {
+    it("Tests duplicated email can't be registered", () => {
+      onLoginPage.logout();
+      onLoginPage.registerNewUser();
+      cy.contains('The email address is already in use by another account.')
+        .should('be.visible');
+      })
+    })
+   
 describe('Shopping cart/Checkout', () => {
     it('tests that product can be added to the cart', () => {
       onMainPage.addProductToCart("macbook Retina 13.3' ME662 (2013)");
@@ -78,5 +88,4 @@ describe('Shopping cart/Checkout', () => {
       cy.get('input').should('not.have.value', '-1');
     })
   })
-  
 
