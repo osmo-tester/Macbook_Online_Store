@@ -1,0 +1,21 @@
+{
+  "name": "jscodeshift-imports",
+  "author": "Pieter Vanderwerff",
+  "version": "1.1.0",
+  "description": "A JSCodeshift extension with helpers for modifying `import` and `require` statements.",
+  "license": "MIT",
+  "repository": "https://github.com/cpojer/js-codemod/tree/master/extensions/imports",
+  "keywords": [
+    "codemod",
+    "recast",
+    "jscodeshift",
+    "require",
+    "import"
+  ],
+  "dependencies": {
+    "nuclide-format-js": "0.0.36"
+  },
+  "peerDependencies": {
+    "jscodeshift": "^0.3.0"
+  }
+}
